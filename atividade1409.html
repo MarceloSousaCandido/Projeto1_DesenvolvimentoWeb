@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+	<meta charset="utf-8" http-equiv="Content-Type" content="text/html"/>
+	<title> Exemplo do uso de vetor em JavaScript </title>
+	<script>
+		var pets = ["Cachorro", "Gato", "Coelho"];
+		
+		//var pets = new Array(10);		Outra possibilidade
+		
+		alert(pets.join(" e "));
+		alert(pets[1]);
+
+		pets[3] = "Papagaio";
+		
+		alert(pets.join());
+		
+		pets.push("Porco");  //Para adicionar um elemento no final de um array
+
+		alert(pets.join());
+
+		pets.unshift("Galinha"); //Para adicionar um elemento no início de um array
+
+		alert(pets.join());
+
+		var result = pets.pop();  // Removendo elemento no final de um array
+
+		alert(result);
+
+		var result1 = pets.shift();  // Removendo elemento no início de um array
+
+		alert(result1);
+
+		var pets2 = ["Elefante", "Ovelha"];
+
+		var resultado = pets.concat(pets2); // Para concatenar utilizamos o concat
+
+		alert(resultado);
+
+		var ind = pets.indexOf("Borboleta"); // Para descobrir o índice de um elemento no array
+
+		alert(ind);
+
+		pets.sort(); //Ordenar o vetor em ordem alfabética
+
+		alert(pets);
+
+		pets.reverse();  // A junção de sort + reverse consegue ordenar o vetor em ordem decrescente
+
+
+
+
+	</script>
+
+	</head>
+
+</html>
