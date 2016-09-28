@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<meta charset="utf-8" http-equiv="Content-Type" content="text/html"/>
+	<head>
+		<title> Fale Conosco - Searching Health - Hortolândia </title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+		<script language="JavaScript" >
+			function enviardados(){
+ 
+				if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8){
+					alert( "Preencha campo NOME corretamente!" );
+					document.dados.tx_nome.focus();
+					return false;
+				}
+				else
+ 					if( document.dados.tx_email.value=="" || document.dados.tx_email.value.indexOf('@')==-1 || document.dados.tx_email.value.indexOf('.')==-1 ){
+						alert( "Preencha campo E-MAIL corretamente!" );
+						document.dados.tx_email.focus();
+						return false;
+					}
+					else
+ 						if (document.dados.tx_mensagem.value==""){
+							alert( "Preencha o campo MENSAGEM!" );
+							document.dados.tx_mensagem.focus();
+							return false;
+						}
+						else
+							if (document.dados.tx_mensagem.value.length < 20 ){
+								alert( "É necessario preencher o campo MENSAGEM com mais de 20 caracteres!" );
+								document.dados.tx_mensagem.focus();
+								return false;
+							}
+							else
+								return true;
+				}
+ 
+		</script>
+
+	</head>
+
+	<body>
+		<div class="pagina">
+			<div class="topo">
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Início</a></li>
+						<li><a href="contato.html">Contato</a></li>
+						<li><a href="sobre.html">Sobre</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="conteudo">
+				<h2><center> Fale Conosco - Searching Health - Hortolândia </center></h2>
+				<br><br><br>
+				<form action="pagina de ação" method="post" name="dados" onSubmit="return enviardados();" >
+  					<table width="588" border="0" align="center" >
+				    	<tr>
+      						<td width="300" class="fontes_textos"><b>Nome completo:</b></td>
+      						<td width="460"><input name="tx_nome" type="text" class="formbutton" id="tx_nome" size="52" maxlength="150" autofocus required placeholder="Digite aqui seu Nome Completo"></td>
+		    			</tr>
+    					<tr>
+    						<td class="fontes_textos"><b>E-mail:</b></td>
+		    				<td><input name="tx_email" type="text" id="tx_email" size="52" maxlength="150" class="formbutton" required placeholder="Digite aqui seu E-mail"></td>
+    					</tr>
+    					<tr>
+		      				<td class="fontes_textos"><b>Mensagem:</b></td>
+      						<td rowspan="2"><textarea name="tx_mensagem" cols="52" rows="8" class="formbutton" id="tx_mensagem" required placeholder="Digite aqui sua Mensagem"></textarea></td>
+      					</tr>
+						<tr>
+      						<td height="85"><p></p></td>
+    					</tr>
+		    			<tr>
+      						<td height="22"></td>
+      						<td><input name="Submit" type="submit" value="Enviar dados">				<input name="Reset" type="reset" value="Redefinir"></td>
+		    			</tr>
+  					</table>
+				</form>
+			</div>
+
+			<div class="rodape">
+				<center>Aqui é o Rodapé da Página</center>
+			</div>
+		</div>
+	</body>
+</html>
